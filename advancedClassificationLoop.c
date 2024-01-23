@@ -4,16 +4,16 @@
 
 int isPalindrome(int x){
     int digitsC=digitCount(x);
-    if(digitsC==0){return TRUE;}
+    if(digitsC==0){return 1;}
     else {
         int arr[digitsC];
         for (int i = 0; i < digitsC; i++) {
             arr[i] = specDigit(x, i);
         }
-        int ans=TRUE;
+        int ans=1;
         for(int i=0; i<digitsC/2;i++){
             if(arr[i]!=arr[digitsC-i-1]){
-                ans=FALSE;
+                ans=0;
             }
         }
         return ans;
@@ -24,8 +24,8 @@ int isArmstrong(int x){
     int digitsC= digitCount(x);
     int sum=0;
     for(int i=0; i<digitsC; i++){
-        sum= sum+ specDigit(x,i)^digitsC;
+        sum= sum + power(specDigit(x, i), digitsC);
     }
-    if(sum==x){return TRUE;}
-    else{return FALSE;}
+    if(sum==x){return 1;}
+    else{return 0;}
 }

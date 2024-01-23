@@ -9,6 +9,7 @@
 int digitCount(int x);
 int atseret(int x);
 int specDigit(int num, int d);
+int power(int num, int maarich);
 int isPrime(int x);
 int isStrong(int x);
 int isArmstrong(int x);

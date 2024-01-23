@@ -7,21 +7,22 @@ int atseret(int x);
 int specDigit(int num, int d);
 int isPrime(int x);
 int isStrong(int x);
+int power(int num, int maarich);
 
  int isPrime(int x){
     if(x<1){
-        return FALSE;
+        return 0;
     }
-    if(x==1){
-        return TRUE;
+    if(x==1 || x==2){
+        return 1;
     }
     else {
         for (int i = 2; i < x / 2; i++) {
             if (x % i == 0) {
-                return FALSE;
+                return 0;
             }
         }
-        return TRUE;
+        return 1;
     }
 
 }
@@ -33,12 +34,12 @@ int isStrong(int x){
         int z= specDigit(x, i);
         sumOfDig=sumOfDig+atseret(z);
     }
-    if(x==sumOfDig){return TRUE;}
-    else{return FALSE;}
+    if(x==sumOfDig){return 1;}
+    else{return 0;}
 }
 
 int specDigit(int num, int d){
-     return (num/10^d) % 10;
+     return (num / power(10, d)) % 10;
 
  }
 
@@ -64,3 +65,11 @@ int atseret(int x){
         return y;
     }
 }
+
+int power(int num, int maarich){
+     int x=1;
+     for(int i=1; i<=maarich; i++){
+         x=num*x;
+     }
+     return x;
+ }

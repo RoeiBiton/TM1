@@ -9,9 +9,9 @@ int isPalindrome(int x){
 }
 
 int isPalindromeRecursive(int x, int start, int end){
-    if(start>=end){return TRUE;}
+    if(start>=end){return 1;}
     else{
-        if(specDigit(x,start)!= specDigit(x,end)){return FALSE;}
+        if(specDigit(x,start)!= specDigit(x,end)){return 0;}
     }
     return isPalindromeRecursive(x,start+1,end-1);
 }
@@ -21,8 +21,8 @@ int isArmstrong(int x){
 }
 
 int isArmstrongRecursive(int x, int sum, int digit){
-    if(digit>= digitCount(x)){return FALSE;}
-    sum=sum+ specDigit(x,digit)^ digitCount(x);
-    if(sum==x && digit== digitCount(x)-1){return TRUE;}
+    if(digit>= digitCount(x)){return 0;}
+    sum= sum + power(specDigit(x, digit), digitCount(x));
+    if(sum==x && digit== digitCount(x)-1){return 1;}
     return isArmstrongRecursive(x,sum,digit+1);
 }
