@@ -2,8 +2,12 @@ CC=gcc
 AR=ar
 OBJECTS_MAIN=main.o
 FLAGS =-Wall -g
+loops: libclassloops.a
+loopd: libclassloops.so
+recursives: libclassrec.a
+recursived: libclassrec.so
 
-make_all: mains maindloop maindrec libclassloops.a libclassrec.a libclassrec.so libclassloops.so
+make_all: mains maindloop maindrec libclassloops.a libclassrec.a libclassrec.so libclassloops.so loops loopd recursives recursived
 
 mains:libclassrec.a main.o
 	 $(CC) $(FLAGS) -o mains main.o libclassrec.a

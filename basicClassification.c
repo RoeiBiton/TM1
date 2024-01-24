@@ -17,7 +17,7 @@ int power(int num, int maarich);
         return 1;
     }
     else {
-        for (int i = 2; i < x / 2; i++) {
+        for (int i = 2; i <= x / 2; i++) {
             if (x % i == 0) {
                 return 0;
             }

@@ -20,15 +20,15 @@ int main() {
             printf("%d ",i );
         }
     }
-    printf("/n");
+    printf("\n");
 
     printf("The Palindromes are: ");
     for(int i=x; i<=y;i++){
-        if(isPalindrome(i)){
+        if(isPalindrome2(i)){
             printf("%d ",i );
         }
     }
-    printf("/n");
+    printf("\n");
 
     printf("The Prime numbers are: ");
     for(int i=x; i<=y;i++){
@@ -36,7 +36,7 @@ int main() {
             printf("%d ",i );
         }
     }
-    printf("/n");
+    printf("\n");
 
     printf("The Strong numbers are: ");
     for(int i=x; i<=y;i++){
@@ -44,6 +44,6 @@ int main() {
             printf("%d ",i );
         }
     }
-    printf("/n");
+    printf("\n");
     return 0;
 }
