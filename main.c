@@ -4,10 +4,8 @@
 int main() {
     int x=0;
     int y=0;
-    printf("Please enter a number: \n");
-    scanf("%d", &x);
-    printf("Please enter another number: \n");
-    scanf("%d", &y);
+    
+    scanf("%d" "%d",&x,&y);
     int z=0;
     if(y<x){
         z=x;
@@ -24,7 +22,7 @@ int main() {
 
     printf("The Palindromes are: ");
     for(int i=x; i<=y;i++){
-        if(isPalindrome2(i)){
+        if(isPalindrome(i)){
             printf("%d ",i );
         }
     }

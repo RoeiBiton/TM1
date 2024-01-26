@@ -14,6 +14,4 @@ int isPrime(int x);
 int isStrong(int x);
 int isArmstrong(int x);
 int isPalindrome(int x);
-int isArmstrong2(int x);
-int isPalindrome2(int x);
 
