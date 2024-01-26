@@ -1,6 +1,10 @@
 #include "NumClass.h"
 #define TRUE = 1
 #define FALSE = 0
+int digitCount(int x);
+int atseret(int x);
+int specDigit(int num, int d);
+int power(int num, int maarich);
 
 int isPalindrome(int x){
     int digitsC=digitCount(x);

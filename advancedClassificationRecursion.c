@@ -1,6 +1,11 @@
 #include "NumClass.h"
 #define TRUE = 1
 #define FALSE = 0
+int digitCount(int x);
+int atseret(int x);
+int specDigit(int num, int d);
+int power(int num, int maarich);
+
 int isPalindromeRecursive(int x, int start, int end);
 int isArmstrongRecursive(int x, int sum, int digit);
 
