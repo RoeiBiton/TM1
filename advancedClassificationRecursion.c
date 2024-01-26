@@ -10,6 +10,7 @@ int isPalindromeRecursive(int x, int start, int end);
 int isArmstrongRecursive(int x, int sum, int digit);
 
 int isPalindrome(int x){
+    if(x<0){return 0;}
     return isPalindromeRecursive(x,0, digitCount(x)-1);
 }
 
@@ -22,6 +23,7 @@ int isPalindromeRecursive(int x, int start, int end){
 }
 
 int isArmstrong(int x){
+    if(x<0){return 0;}
     return isArmstrongRecursive(x, 0, 0);
 }
 

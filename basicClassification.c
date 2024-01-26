@@ -28,6 +28,7 @@ int power(int num, int maarich);
 }
 
 int isStrong(int x){
+    if(x<0){return 0;}
     int dig= digitCount(x);
     int sumOfDig=0;
     for(int i=0; i<dig;i++){

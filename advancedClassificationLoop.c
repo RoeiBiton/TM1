@@ -7,6 +7,7 @@ int specDigit(int num, int d);
 int power(int num, int maarich);
 
 int isPalindrome(int x){
+    if(x<0){return 0;}
     int digitsC=digitCount(x);
     if(digitsC==0){return 1;}
     else {
@@ -25,6 +26,7 @@ int isPalindrome(int x){
 }
 
 int isArmstrong(int x){
+    if(x<0){return 0;}
     int digitsC= digitCount(x);
     int sum=0;
     for(int i=0; i<digitsC; i++){
