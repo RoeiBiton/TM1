@@ -9,6 +9,7 @@ int power(int num, int maarich);
 int isPalindromeRecursive(int x, int start, int end);
 int isArmstrongRecursive(int x, int sum, int digit);
 
+//Check if number is palindrome
 int isPalindrome(int x){
     if(x<0){return 0;}
     return isPalindromeRecursive(x,0, digitCount(x)-1);
@@ -22,6 +23,7 @@ int isPalindromeRecursive(int x, int start, int end){
     return isPalindromeRecursive(x,start+1,end-1);
 }
 
+//Check if number is armstrong
 int isArmstrong(int x){
     if(x<0){return 0;}
     return isArmstrongRecursive(x, 0, 0);

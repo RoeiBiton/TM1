@@ -9,6 +9,7 @@ int isPrime(int x);
 int isStrong(int x);
 int power(int num, int maarich);
 
+// Function that check if x is Prime
  int isPrime(int x){
     if(x<1){
         return 0;
@@ -17,6 +18,7 @@ int power(int num, int maarich);
         return 1;
     }
     else {
+        //Check that x is not divided in any number but itself and 1
         for (int i = 2; i <= x / 2; i++) {
             if (x % i == 0) {
                 return 0;
@@ -26,11 +28,12 @@ int power(int num, int maarich);
     }
 
 }
-
+//Check if x is Strong number
 int isStrong(int x){
     if(x<0){return 0;}
     int dig= digitCount(x);
     int sumOfDig=0;
+    //Calculate sum of digits
     for(int i=0; i<dig;i++){
         int z= specDigit(x, i);
         sumOfDig=sumOfDig+atseret(z);
@@ -38,12 +41,12 @@ int isStrong(int x){
     if(x==sumOfDig){return 1;}
     else{return 0;}
 }
-
+//Give a specific digit from num
 int specDigit(int num, int d){
      return (num / power(10, d)) % 10;
 
  }
-
+//Check the amount of digit in x
 int digitCount(int x){
     int counter=0;
     int y=x;
@@ -66,7 +69,7 @@ int atseret(int x){
         return y;
     }
 }
-
+// Calculate power of number
 int power(int num, int maarich){
      int x=1;
      for(int i=1; i<=maarich; i++){
